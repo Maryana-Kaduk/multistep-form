@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>multi-step-form</title>
+</head>
+<body>
+    <section class="form__wrapper first-step">
+        <aside class="left">
+            <nav>
+                <ul class="left__list">
+                    <li class="list__item">
+                        <div class="step__number step__number-selected">1</div>
+                        <div class="step__name-wrapper">
+                            <h4>Step 1</h4>
+                            <h3>YOUR INFO</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <div class="step__number">2</div>
+                        <div class="step__name-wrapper">
+                            <h4>Step 2</h4>
+                            <h3>SELECT PLAN</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <div class="step__number">3</div>
+                        <div class="step__name-wrapper">
+                            <h4>Step 3</h4>
+                            <h3>ADD-ONS</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <div class="step__number">4</div>
+                        <div class="step__name-wrapper">
+                            <h4>Step 4</h4>
+                            <h3>SUMMARY</h3>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./assets/background/left__oval.svg" class="oval__one">
+            <img src="./assets/background/left__circle.svg" class="circle">
+            <img src="./assets/background/lines.svg" class="lines">
+            <img src="./assets/background/right__oval.svg" class="oval__two">
+        </aside>
+        <form id="personal__info">
+            <div>
+                <article class="form__text">
+                    <h1>Personal info</h1>
+                    <p>Please provide your name, email address, and phone number.</p>
+                </article>
+                <article class="form__content">
+                    <div class="input__wrapper">
+                        <label for="name" class="input__text">Name</label>
+                        <input type="text" class="input" id="name" name="name" placeholder="e.g. Stephen King">
+    
+                        <span class="error__text"></span>
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="email" class="input__text">Email Address</label>
+                        <input type="email" class="input" id="email" name="email" placeholder="e.g. stephenking@lorem.com">
+    
+                        <span class="error__text"></span>
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="phoneNumber" class="input__text">Phone Number</label>
+                        <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="e.g. +1 234 567 890">
+    
+                        <span class="error__text"></span>
+                    </div>
+                </article>
+            </div>
+
+            <article class="buttons">
+                <button class="previousStep" type="button"></button> 
+                <button type="button" class="nextStep">Next Step</button>
+            </article>
+        </form>
+
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+<!--     <section class="form__wrapper first-step">
+        <aside class="left">
+            <nav>
+                <ul class="left__list">
+                    <li class="list__item">
+                        <button class="step__number" style="border: 0;
+                        background: #BEE2FD !important;
+                        color: #022959;">1</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 1</h4>
+                            <h3>YOUR INFO</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">2</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 2</h4>
+                            <h3>SELECT PLAN</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">3</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 3</h4>
+                            <h3>ADD-ONS</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">4</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 4</h4>
+                            <h3>SUMMARY</h3>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./assets/background/left__oval.svg" class="oval__one">
+            <img src="./assets/background/left__circle.svg" class="circle">
+            <img src="./assets/background/lines.svg" class="lines">
+            <img src="./assets/background/right__oval.svg" class="oval__two">
+        </aside>
+        <form id="personal__info">
+            <article class="form__text">
+                <h1>Personal info</h1>
+                <p>Please provide your name, email address, and phone number.</p>
+            </article>
+            <article class="form__content">
+                <div class="input__wrapper">
+                    <label for="name" class="input__text">Name</label>
+                    <input type="text" class="input" id="name" name="name" placeholder="e.g. Stephen King">
+
+                    <span class="error__text"></span>
+                </div>
+                <div class="input__wrapper">
+                    <label for="email" class="input__text">Email Address</label>
+                    <input type="email" class="input" id="email" name="email" placeholder="e.g. stephenking@lorem.com">
+
+                    <span class="error__text"></span>
+                </div>
+                <div class="input__wrapper">
+                    <label for="phoneNumber" class="input__text">Phone Number</label>
+                    <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="e.g. +1 234 567 890">
+
+                    <span class="error__text"></span>
+                </div>
+            </article>
+
+
+            <article class="buttons">
+                <button class="previousStep"></button> 
+                <button type="button" class="nextStep">Next Step</button>
+            </article>
+
+        </form>
+    </section> -->
+
+
+ <!--    <section class="form__wrapper second-step">
+        <aside class="left">
+            <nav>
+                <ul class="left__list">
+                    <li class="list__item">
+                        <button class="step__number">1</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 1</h4>
+                            <h3>YOUR INFO</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number" style="border: 0;
+                        background: #BEE2FD !important;
+                        color: #022959;">2</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 2</h4>
+                            <h3>SELECT PLAN</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">3</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 3</h4>
+                            <h3>ADD-ONS</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">4</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 4</h4>
+                            <h3>SUMMARY</h3>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./assets/background/left__oval.svg" class="oval__one">
+            <img src="./assets/background/left__circle.svg" class="circle">
+            <img src="./assets/background/lines.svg" class="lines">
+            <img src="./assets/background/right__oval.svg" class="oval__two">
+        </aside>
+        <form id="select__plan">
+            <article class="form__text">
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly or yearly billing.</p>
+            </article>
+            <article class="form__content">
+                <section class="choosing__plan">
+                    <article class="plan plan-arcade">
+                        <input type="radio" name="plan" id="arcade" checked>
+                        <label for="arcade">
+                            <img src="./assets/icons/arcade.svg" alt="icon">
+                            <div class="plan__text-wrapper">
+                                <h2 class="heading">Arcade</h2>
+                                <p class="price">$<span class="price__number">9</span>/<span class="price__plan">mo</span></p>
+                                <span class="yearly__free"></span>
+                            </div>
+                        </label>
+                    </article>
+                    <article class="plan plan-advanced">
+                        <input type="radio" name="plan" id="advanced">
+                        <label for="advanced">
+                            <img src="./assets/icons/advanced.svg" alt="icon">
+                            <div class="plan__text-wrapper">
+                                <h2 class="heading">Advanced</h2>
+                                <p class="price">$<span class="price__number">12</span>/<span class="price__plan">mo</span></p>
+                                <span class="yearly__free"></span>
+                            </div>
+                        </label>
+                    </article>
+                    <article class="plan plan-pro">
+                        <input type="radio" name="plan" id="pro">
+                        <label for="pro">
+                            <img src="./assets/icons/pro.svg" alt="icon">
+                            <div class="plan__text-wrapper">
+                                <h2 class="heading">Pro</h2>
+                                <p class="price">$<span class="price__number">15</span>/<span class="price__plan">mo</span></p>
+                                <span class="yearly__free"></span>
+                            </div>
+                        </label>
+                    </article>
+                </section>
+                <section class="billing">
+                    <article class="billing__content">
+                        <label for="monthly-radio" class="choose__billing" id="monthly" style="color: #022959;">Monthly</label>
+                        <div class="radios">
+                            <input type="radio" name="chosing__billing-radio" id="monthly-radio" checked>
+                            <input type="radio" name="chosing__billing-radio" id="yearly-radio">
+                        </div>
+                        <label for="yearly-radio" class="choose__billing" id="yearly">Yearly</label>
+                    </article>
+                </section>
+            </article>
+
+
+            <article class="buttons">
+                <button type="button" class="previousStep">Go Back</button> 
+                <button type="button" class="nextStep">Next Step</button>
+            </article>
+
+        </form>
+    </section>  -->
+
+
+
+
+
+
+
+<!--     <section class="form__wrapper third-step">
+        <aside class="left">
+            <nav>
+                <ul class="left__list">
+                    <li class="list__item">
+                        <button class="step__number">1</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 1</h4>
+                            <h3>YOUR INFO</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number" >2</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 2</h4>
+                            <h3>SELECT PLAN</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number" style="border: 0;
+                        background: #BEE2FD !important;
+                        color: #022959;">3</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 3</h4>
+                            <h3>ADD-ONS</h3>
+                        </div>
+                    </li>
+                    <li class="list__item">
+                        <button class="step__number">4</button>
+                        <div class="step__name-wrapper">
+                            <h4>Step 4</h4>
+                            <h3>SUMMARY</h3>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./assets/background/left__oval.svg" class="oval__one">
+            <img src="./assets/background/left__circle.svg" class="circle">
+            <img src="./assets/background/lines.svg" class="lines">
+            <img src="./assets/background/right__oval.svg" class="oval__two">
+        </aside>
+        <form id="select__service">
+            <article class="form__text">
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience.</p>
+            </article>
+            <article class="form__content">
+                <label class="chooseService" for="service">
+                    <article class="chooseServiceWrapper">
+                        <input type="checkbox" name="service" id="service">
+                        <div class="chooseServiceText">
+                            <h2>Online service</h2>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                    </article>
+                    <p class="chooseServicePrice">+$<span class="chooseServicePriceNumber">1</span>/<span class="chooseServicePricePlan">mo</span></p>
+                </label>
+                <label class="chooseService" for="storage">
+                    <article class="chooseServiceWrapper">
+                        <input type="checkbox" name="storage" id="storage">
+                        <div class="chooseServiceText">
+                            <h2>Larger storage</h2>
+                            <p>Extra 1TB of cloud save</p>
+                        </div>
+                    </article>
+                    <p class="chooseServicePrice">+$<span class="chooseServicePriceNumber">2</span>/<span class="chooseServicePricePlan">mo</span></p>
+                </label>
+                <label class="chooseService" for="profile">
+                    <article class="chooseServiceWrapper">
+                        <input type="checkbox" name="profile" id="profile">
+                        <div class="chooseServiceText">
+                            <h2>Customizable profile</h2>
+                            <p>Custom theme on your profile</p>
+                        </div>
+                    </article>
+                    <p class="chooseServicePrice">+$<span class="chooseServicePriceNumber">2</span>/<span class="chooseServicePricePlan">mo</span></p>
+                </label>
+            </article>
+
+
+            <article class="buttons">
+                <button type="button" class="previousStep">Go Back</button> 
+                <button type="button" class="nextStep">Next Step</button>
+            </article>
+        </form>
+    </section> -->

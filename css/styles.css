@@ -1,0 +1,564 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #EFF5FF;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__wrapper {
+    max-width: 940px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 100px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.10);
+    padding: 16px 100px 16px 16px;
+}
+
+.left {
+    height: 100%;
+    padding: 42px 32px;
+    max-width: 274px;
+    width: 100%;
+    border-radius: 10px;
+    background: #483EFF;
+    position: relative;
+}
+
+.oval__one {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.circle {
+    position: absolute;
+    bottom: 21px;
+    left: 0;
+}
+
+.lines {
+    position: absolute;
+    bottom: 64px;
+    right: 60px;
+    z-index: 100;
+}
+.oval__two {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.left__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.list__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.step__number {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    outline: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step__name-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.step__name-wrapper h4 {
+    color: #ABBCFF;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.step__name-wrapper h3 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+form {
+    max-width: 450px;
+    width: 100%;
+}
+
+.form__text {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 35px;
+}
+
+.form__text h1 {
+    color: #022959;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.form__text p {
+    color: #9699AA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+form#personal__info .form__content {
+    margin-bottom: 92px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form#personal__info .input__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: relative;
+}
+
+form#personal__info .input__text {
+    color: #022959;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+}
+
+form#personal__info .input {
+    outline: none;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #D6D9E6;
+    background:#FFF;
+    padding: 11px 16px;
+
+    color:#022959;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+form#personal__info .input.error {
+    border: 1px solid #EE374A;
+}
+
+form#personal__info .input.error + span {
+    color: #EE374A;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+form#personal__info .input::placeholder {
+    color:#9699AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+form#select__plan .form__content {
+    margin-bottom: 116px;
+}
+form#select__service .form__content {
+    margin-bottom: 81px;
+}
+
+form#summary .form__content {
+    margin-bottom: 128px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nextStep {
+    border: none;
+    outline: none;
+    width: 123px;
+    height: 48px;
+    border-radius: 8px;
+    background:#022959;
+
+    color: #FFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+
+    transition: background .5s;
+}
+
+.nextStep:disabled {
+    background:#759ecf;
+}
+.nextStep:disabled:hover {
+    background:#759ecf;
+}
+
+.nextStep:hover {
+    background: #164A8A;
+}
+
+.confirmButton {
+    background-color: #483EFF;
+    border-radius: 8px;
+    width: 123px;
+    height: 48px;
+    outline: none;
+    border: none;
+    color: #FFF;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+.confirmButton:hover {
+    background-color: #0c00f7;
+}
+
+.previousStep {
+    color: #9699AA;
+    font-family: 'Ubuntu';  
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    outline: none;
+    transition: color .5s;
+    background-color: transparent;
+}
+
+.previousStep:hover {
+    color: #022959;  
+}
+
+
+form#select__plan .choosing__plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+form#select__plan .plan label {
+    padding: 20px 16px 9px;
+    width: 138px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 39px;
+
+    border-radius: 8px;
+    border: 1px solid #D6D9E6;
+    background: #fff;
+
+    transition: all .3s;
+}
+form#select__plan .plan__text-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 7px;
+}
+form#select__plan .heading {
+    color: #022959;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}
+form#select__plan .price {
+    color: #9699AA;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+form#select__plan .yearly__free {
+    color:#022959;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input[name="plan"] {
+    display: none;
+}
+
+form#select__plan .plan input[name="plan"]:checked + label {
+    border: 1px solid #483EFF;
+    background: #F8F9FF;
+}
+
+form#select__plan .billing {
+    border-radius: 8px;
+    background: #F8F9FF;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form#select__plan .billing__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+form#select__plan .choose__billing {
+    color: #9699AA;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+}
+form#select__plan .radios {
+    width: 38px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+    background: #022959;
+}
+form#select__plan .radios input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+form#select__plan .radios input:checked {
+    background: #fff;
+}
+
+
+form#select__service .form__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+form#select__service .chooseService {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 81px;
+    padding: 16px 24px 20px;
+    border-radius: 8px;
+    border: 1px solid #D6D9E6;
+    background: #FFF;
+}
+form#select__service .chooseServiceWrapper {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+form#select__service .chooseServiceText {
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+}
+form#select__service .chooseServiceText h2 {
+    color: #022959;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}
+form#select__service .chooseServiceText p {
+    color: #9699AA;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+form#select__service .chooseServicePrice {
+    color: #483EFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+form#select__service .chooseServiceWrapper input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/icons/checkbox__not-checked.svg);
+}
+form#select__service .chooseServiceWrapper input[type="checkbox"]:checked {
+    background-image: url(../assets/icons/checkbox__checked.svg);
+}
+
+form#select__service label.chooseService.checkbox-checked {
+    border: 1px solid #483EFF;
+    background:#F8F9FF;
+}
+
+.step__number.step__number-selected {
+    border: 0;
+    background: #BEE2FD !important;
+    color: #022959;
+}
+
+form#summary .form__content-wrapper {
+    color: #9699AA;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+form#summary .form__wrapper-background {
+    padding: 16px 24px 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background: #F8F9FF;
+}
+
+form#summary p.total {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+form#summary .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form#summary button.change {
+    outline: none;
+    border: none;
+    text-decoration-line: underline;
+    background: none;
+    cursor: pointer;
+    color: #9699AA;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.border {
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(150, 153, 170, 0.2043);
+}
+
+form#summary section.flex.plan div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: start;
+    align-items: start;
+}
+
+form#summary section.flex.plan h3, 
+form#summary section.flex.plan h4 {
+    color: #022959;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+form#summary p.price {
+    color:#022959;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+form#summary p.total span.total__price {
+    color:#483EFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+form#thankYou {
+    height: 100%;
+}
+
+form#thankYou div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form#thankYou img {
+    margin-bottom: 32px;
+}
+
+form#thankYou h1 {
+    margin-bottom: 14px;
+    text-align: center;
+    color:#022959;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+form#thankYou p {
+    text-align: center;
+    color: #9699AA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
